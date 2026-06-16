@@ -1,7 +1,7 @@
-#development might resume or not idk
+# development might resume or not idk
 - imma try to stop being so corny cuz holy this was pretty bad
 
-- Ok, so for whoever doesn't know, cat miner started as just a sort of idle game that I made, and it was just a font awesome cat and a pickaxe mining air.
+Ok, so for whoever doesn't know, cat miner started as just a sort of idle game that I made, and it was just a font awesome cat and a pickaxe mining air.
 ![image](https://github.com/zippyfish/assetsforsomething/raw/main/img129834.png)
 
 After that, I updated it a little bit more, changed the UI,
