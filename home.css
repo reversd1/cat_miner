@@ -1,34 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+* {
+    box-sizing: border-box;
+}
 
-#logo {
-  position:absolute;
-}
-#wefw {
-  display:flex;
-  justify-content: center;
-}
+
 #news {
+  flex-direction: row;
   font-size:1em;
-  max-height: 30em;
-  position:absolute;
-  left:0;
-  top:15%;
-  margin:50px;
+  width:25%;
   border:1px black solid;
-  height:60vh;
-  width:30vw;
-  padding:5px;
   font-family:"Golos Text";
   background:#FFFF;
-
+  padding:5px;  
 }
 #buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
   top:50%;
-  height:100vh;
-  flex-direction: column;
+  flex-direction: row;
+  gap:2.5vw;
 }
 button   {
   font-family:"Golos Text";
@@ -41,8 +31,12 @@ button   {
   color: white;
 }
 body {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  gap:5vh;  
   margin:0;
-    background:url(./game/assets/bg.png);
+    background:url(./assets/bg.png);
     animation: marquee 35s infinite linear;
     background-repeat: repeat;
     background-size:100px;
@@ -53,5 +47,22 @@ body {
   }
   100% {
     background-position: -1190px;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    margin:25px;
+  }
+  #news{
+    width:max-content;
+    font-size:0.7em;
+  }
+  #logo {
+    height: 50px;
+  }
+  button {
+    height:min-content;
+    width:min-content;
   }
 }

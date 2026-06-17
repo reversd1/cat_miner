@@ -1,38 +1,611 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu:wght@500&display=swap');
-#logo-ctr {
-  display:flex;
-  justify-content: center;
+/* random fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+  background-size: cover;
+  background-repeat: none;
+}
+
+
 #logo {
-  height:100px;
-  position: absolute;
+    height:60px;
+    margin:15px;
 }
-body {
-  margin:0;
-    background:url(./game/assets/bg.png);
-    animation: marquee 35s infinite linear;
-    background-repeat: repeat;
-    background-size:40px;
+#cat {
+    
+    height:350px;
+    transform:scaleX(-1);
+    z-index:0;
+    filter:drop-shadow(10px 10px 10px black);
 }
-#menu {  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height:100vh;
+#pick {
+    position:absolute;
+    left:220px;
+    z-index: 1;
+    animation: swing 1s;
+    transform-origin: 0 0;
+    height:128px;
+    transform: translateY(-150px) translateX(-10px);
+    transform-origin: bottom left;
+        filter:drop-shadow(2px 10px 10px black)
+    
 }
-#btn1, #btn2 {
-  border:none;
-  height:50px;
-  width:150px;
-  font-size:25px;
-  padding:10px;
+#mine-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;
+
 }
-@keyframes marquee {
+#ore-src {
+    height:250px;
+
+
+    z-index:-1;
+    filter:drop-shadow(2px 10px 10px black);
+}
+#ore-src:active {
+    scale:0.9;
+}
+#ore-src:hover {
+    cursor:pointer;
+}
+#catcoins {
+    position:relative;
+    margin:15px;
+    color:white;
+    background:rgba(67, 67, 67, 0.3);
+    font-family:Archivo;
+    width:fit-content;
+    padding:3px;
+    border-radius: 5px;
+    z-index:13;
+    text-shadow: black 0.1em 0.1em;
+}
+#pickInfo {
+    position:absolute;
+    margin-left:5vw;
+    margin-top:35vh;
+    width:10vw;
+    font-family: Noto Sans;
+    border: 1px black solid;
+    border-radius:2px;
+    background: rgba(67, 67, 67, 0.3);
+    padding:0.5rem;
+
+}
+@keyframes swing {
     0% {
-      background-position: 0;
+        transform: translateY(-150px) rotate(70deg) translateX(-10px);;
+
     }
     100% {
-      background-position: -1190px;
+        transform: translateY(-150px) rotate(0deg) translateX(-10px);;
+
     }
   }
+#shop {
+    border:none;
+    box-shadow: 0 3px white;
+    border-radius: 5px;
+    background: linear-gradient(270deg, rgba(1,87,155,1) 0%, rgba(0,109,196,1) 50%, rgba(111,231,255,1) 100%);
+    color:white;
+    text-shadow: 2px 2px 8px #000000;
+    font-size: large;
+    font-family: "Noto Sans";
+    position:absolute;
+    right:0;
+    top:0;
+    margin:30px;
+    width:100px;
+    height:50px;
+    z-index:10;
+
+
+}
+#event {
+    border:none;
+    box-shadow: 0 3px white;
+    border-radius: 5px;
+    background: linear-gradient(270deg, rgba(1,87,155,1) 0%, rgba(0,109,196,1) 50%, rgba(111,231,255,1) 100%);
+    color:white;
+    text-shadow: 2px 2px 8px #000000;
+    font-size: large;
+    font-family: "Noto Sans";
+    position:absolute;
+    right:30vw;
+    top:0;
+    margin:30px;
+    width:100px;
+    height:50px;
+    z-index:10;
+}
+#shop:focus {
+    outline:none;
+}
+#shop:active {
+    box-shadow: 0 2px white;
+    transform: translateY(4px);
+
+}
+#event:active {
+    box-shadow: 0 2px white;
+    transform: translateY(4px);
+
+}
+#shop:hover {
+        background: linear-gradient(270deg, rgba(1,150,200,1) 0%, rgba(0,150,250,1) 50%, rgba(111,255,255,1) 100%);
+}
+
+#event:hover {
+    background: linear-gradient(270deg, rgba(1,150,200,1) 0%, rgba(0,150,250,1) 50%, rgba(111,255,255,1) 100%);
+}
+#shop_ctr {
+    position: absolute;
+    background:white;  
+    height:100vh;
+    width:100vw;
+    top:0;
+    left:0;
+    z-index:11;
+    background:#FB8C00;
+    background-size: 1200px;
+    background-position-x: 15px;
+    background-position-y: 80px;
+    display: none;
+    animation-name:rollIn;
+    animation-duration: 0.4s;
+
+}
+#shop_ctr_ctr {
+    display:grid;
+    place-items: center;
+}
+#mrloaf {
+    height:60vh;
+    width:33vw;
+    position: fixed;
+    right:0; 
+    margin-top:15vh;
+    animation: mrloaf_idle 2.5s linear infinite;
+    filter: drop-shadow(5px 10px 10px black);
+}
+
+#shopsign {
+    position: absolute;
+    top:0;
+    z-index: 6;
+    right:0;
+    height:125px;
+}
+#shop-pick {
+    position: absolute;
+    left:35%;
+    top:35%;
+    height:150px;
+    animation: spin 3s linear infinite;
+    display: none;
+    filter: drop-shadow(2px 10px 10px black);
+}
+#buy {
+    margin: 0 auto;
+    border:none;
+    font-family:Nunito;
+    border-radius:4px;
+    position:absolute;
+    top:65vh;
+    left:32vw;
+    width:100px;
+    height:40px;
+    font-size:20px;
+    background:#009688;
+    display: none;
+}
+#pickname {
+    top:70vh;
+    left:32vw;
+    
+}
+#buy:hover {
+    scale: 1.1;
+    background:#26A69A;
+}
+#buy:active {
+    scale:0.9;
+}
+#options {
+    position: absolute;
+    right:0;
+    bottom:3.5vh;
+    background-color: #324249;
+    width:4vw;
+    text-align: center;
+    display: none;
+}
+#ac1:hover {
+  background:#435963;
+}
+#ac2:hover {
+  background:#435963;
+  
+}
+
+#loader {
+    top:0;
+    left:0;
+    position: absolute;
+    width:100vw;
+    height:100vh;
+    background:black;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation:fade 2s;
+    animation-play-state: paused;
+}
+
+#spin{ 
+animation: spin2 2s;
+}
+#placectr {
+    position: absolute;
+    left:30vw;
+    font-size: 40px;
+    font-family: Archivo;
+}
+#pickaxe-rack {
+    position: absolute;
+    margin-left:10vw;
+    top: 2.5vh;
+    display: flex;
+    gap: 6vw;
+}
+.pick_rack_pick {
+    height:128px;
+    image-rendering: pixelated;
+}
+/* for debug */
+#activeboost {
+    color:white;
+}
+#shelf {
+    top:20vh;
+    position:absolute;
+    margin:1.5vw;
+    width:65vw;
+    height:5vh;
+    background:#f5b668;
+}
+#dialog {
+    display: none;
+    background:rgba(100, 100, 100, 0.418);
+    z-index: 50;
+    width:90vw;
+    height:20vh;
+    position: absolute;
+    bottom:30px;
+    margin:50px;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-family: Archivo;
+    font-size:1.5vw;
+    border-radius: 25px;
+    
+}
+#person {
+    position: absolute;
+    top:0;
+    left:0;
+    padding:5px;
+    background-color: rgba(55, 55, 212, 0.674);
+}
+#right {
+    display: block;
+    gap:0px;
+    margin: 0px;
+    position: absolute;
+    left:66vw;
+    height:17vh;
+
+}
+#action {
+    position: absolute;
+    right:0;
+    bottom:0;
+    background:black;
+    width:4vw;
+    text-align: center;
+}
+#travel {
+    border:none;
+    box-shadow: 0 3px white;
+    border-radius: 5px;
+    background: linear-gradient(270deg, rgba(1,87,155,1) 0%, rgba(0,109,196,1) 50%, rgba(111,231,255,1) 100%);
+    color:white;
+    text-shadow: 2px 2px 8px #000000;
+    font-size: large;
+    font-family: "Noto Sans";
+    position:absolute;
+    right:10vw;
+    top:0;
+    margin:30px;
+    width:100px;
+    height:50px;
+    z-index:10;
+
+}
+#travel:hover {
+    background: #0288D1;    
+}
+#travel:active {
+    box-shadow: 0 2px white;
+    transform: translateY(4px);   
+}
+#trvl-menu {
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    background:#26A69A;
+    z-index: 15;
+}
+#place {
+    position:absolute;
+    margin:20px;
+    font-family: Archivo;
+    font-size:xx-large;
+    color:white;
+}
+#minigame {
+    position:absolute;
+    margin:20px;
+    top:50vh;
+    width:10vw;
+    height:20vh;
+    font-size:15px;
+    border:none;
+    background:#42A5F5;
+    border-radius:4px;
+}
+.mini-img {
+    height:10vh;
+}
+noscript {
+    z-index: 16;
+    color:white;
+    font-size:xx-large;
+    font-family:"Comic Sans";
+}
+#visit {
+    display: flexbox;
+    position:absolute;
+    margin:20px;
+    width:12.5vw;
+    height:22.5vh;
+    font-size:15px;
+    border:none;
+    right:0;
+    top:50vh;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+#place-img {
+    height:45%;
+    background-size:auto;
+}
+#exit {
+    position:absolute;
+    z-index:15;
+    top:0;
+    right:0;
+    border:none;
+    background:none;
+    color:white;
+    font-size:50px;
+}
+#exit:hover {
+    cursor:pointer;
+}
+#airport {
+    
+    top:0;
+    left:0;
+    position: absolute;
+    z-index: 11;
+    height:100%;
+    width:100%; 
+    
+}
+#flight {
+  display:none;
+  position:absolute;
+  z-index:17;
+  left:54%;
+  top:22%;
+  font-family:Archivo;
+  font-size:1.5vw;
+  font-variant: small-caps;
+  
+}
+#close:hover {
+    cursor:pointer;
+}
+#close {
+    width:min-content;
+    margin:1vw;
+}
+#toggle_bkry {
+    position: absolute;
+    right:0;bottom:0;
+    width:590px;
+    height:300px;
+}
+#vername {
+    position: absolute;
+    bottom:0;
+    left:0;
+    color:white;
+}
+#news {
+    position: absolute;
+    bottom:0;
+    right:0;
+    color:white;
+    text-shadow: black 0.1em 0.1em;
+}
+#vername {
+   text-shadow: black 0.1em 0.1em;
+}
+#shop2_ctr {
+    position: absolute;
+    background:white;  
+    height:100vh;
+    width:100vw;
+    top:0;
+    left:0;
+    z-index:11;
+    background:#a8a39d;
+    background-size: 1200px;
+    background-position-x: 15px;
+    background-position-y: 80px;
+    display: none;
+    animation-name:rollIn;
+    animation-duration: 0.4s;
+}
+#shop2 {
+    border:none;
+    box-shadow: 0 3px white;
+    border-radius: 5px;
+    background: linear-gradient(270deg, rgba(1,87,155,1) 0%, rgba(0,109,196,1) 50%, rgba(111,231,255,1) 100%);
+    color:white;
+    text-shadow: 2px 2px 8px #000000;
+    font-size: large;
+    font-family: "Noto Sans";
+    position:absolute;
+    right:20vw;
+    top:0;
+    margin:30px;
+    width:100px;
+    height:50px;
+    z-index:10;
+    
+}
+#shop2:hover {
+    background: #0288D1;    
+    
+}
+#shop2:active {
+    box-shadow: 0 2px white;
+    transform: translateY(4px);   
+}
+#sm {
+    position:absolute;
+    right:0;
+    margin:50px;
+    height:400px;
+}
+#sign2 {
+  position:absolute;  
+  height:100px;
+  right:0;
+  top:0;
+  margin-right:20px;
+}
+#boost-shelves {
+    position: absolute;
+    margin-left:10vw;
+    top: 2.5vh;
+    display: grid;
+    grid-gap: 2vh;
+}
+#left, #right, #left2, #right2 {
+    border:none;
+    background:rgb(164, 163, 172);
+    height:10vh
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(720deg);
+
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100%{
+opacity: 0;
+display: none;
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50%
+    {        transform: rotateY(-360deg);
+        
+    }
+    100% {
+        transform: rotateY(0deg);
+        
+    }
+    
+}
+#plus {
+    position:absolute;
+    top:45%;
+    left:25%;
+    color:white;
+    font-family: "Noto Sans";
+}
+#particles-js {
+    position:absolute;
+    top:0;
+    height:99%;
+    z-index: 4;
+}
+#cat-cosmetics {
+    position:absolute;
+    /* this really sucks but for a lazy christmas update its good ig*/
+    margin: 5vw 2vh 5vw;
+    height:15vh;
+    z-index:3;
+    transform:scaleX(-1);
+}   
+@keyframes mrloaf_idle {
+    0% {height:60vh;margin-top:15vh;}
+    48% {height:60vh;margin-top:15vh;}
+    50% {height:50vh;margin-top:25vh;}
+    98% {height:50vh;margin-top:25vh;}
+    100% {height:60vh;margin-top:15vh;}
+    
+}
