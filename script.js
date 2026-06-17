@@ -8,30 +8,30 @@ window.onload = () => {
     },1500)
 }
 //audio stuff
-const accordion = new Audio("https://catminer-reltest.vercel.app/game/assets/accord1.wav")
+const accordion = new Audio("./assets/accord1.wav")
 const pickaxes = ["rusty","iron","gold","pickaxe","steel","baguette","accordion","snail","eiffel Tower","lasagna","christmas Tree","glitchy",];
 const boosts = ["catnip","catgrass","cat Coffee"]
 const places = ["cave","paris","italy","christmas"/* there are plans to add more for sure */];
 const cats = ["original","butterscotch","hearts","sochi"];
 const ores = ["coal","beignet","gingerbread"/*  same thing here, just putting a placeholder */]
 const pick_src = { 
-    'rusty': 'https://catminer-reltest.vercel.app/game/assets/rusty_pick.png',
-    'iron': 'https://catminer-reltest.vercel.app/game/assets/iron_pick.png',
-    'gold': 'https://catminer-reltest.vercel.app/game/assets/gold_pick.png',
-    'pickaxe': 'https://catminer-reltest.vercel.app/game/assets/pickaxe_pick.png',
-    'steel': 'https://catminer-reltest.vercel.app/game/assets/steel_pick.png',
-    'baguette': 'https://catminer-reltest.vercel.app/game/assets/baguette_pick.png',
-    'snail':'https://catminer-reltest.vercel.app/game/assets/snail_pick.png',
-    'eiffel Tower':'https://catminer-reltest.vercel.app/game/assets/eiffeltower_pick.png',
-    "accordion":"https://catminer-reltest.vercel.app/game/assets/accordion_pick.png",
-    'glitchy': 'https://catminer-reltest.vercel.app/game/assets/aipickaxe.png',
+    'rusty': './assets/rusty_pick.png',
+    'iron': './assets/iron_pick.png',
+    'gold': './assets/gold_pick.png',
+    'pickaxe': './assets/pickaxe_pick.png',
+    'steel': './assets/steel_pick.png',
+    'baguette': './assets/baguette_pick.png',
+    'snail':'./assets/snail_pick.png',
+    'eiffel Tower':'./assets/eiffeltower_pick.png',
+    "accordion":"./assets/accordion_pick.png",
+    'glitchy': './assets/aipickaxe.png',
     'christmas Tree': "assets/christmastree_pick.png",
-    "lasagna":"https://catminer-reltest.vercel.app/game/assets/lasagnapick.png"
+    "lasagna":"./assets/lasagnapick.png"
 };
 const ore_src = {
-    "cave":"https://catminer-reltest.vercel.app/game/assets/coal1.png",
+    "cave":"./assets/coal1.png",
     "paris":"assets/beignet.png",
-    "italy":"https://catminer-reltest.vercel.app/game/assets/placeholder.gif",
+    "italy":"./assets/placeholder.gif",
     "christmas":"https://png.pngtree.com/png-vector/20231015/ourmid/pngtree-the-gingerbread-man-png-image_10163077.png"
 }
 const boost_src = {
@@ -101,8 +101,8 @@ const place_img = {
     "christmas":"https://static.vecteezy.com/system/resources/thumbnails/032/411/154/small_2x/deer-standing-in-winter-snow-background-with-christmas-tree-merry-christmas-and-happy-new-year-ai-generated-free-photo.jpg"
 }
 const minig_img = {
-    "cave":"https://catminer-reltest.vercel.app/game/assets/placeholder.gif",
-    "paris":"https://catminer-reltest.vercel.app/game/assets/placeholder.gif"
+    "cave":"./assets/placeholder.gif",
+    "paris":"./assets/placeholder.gif"
 }
 const ticket_prc = {
     "paris":10000000,
@@ -413,7 +413,7 @@ let saveInterval = setInterval(() => {
   
 
     //set the catcoins element to be the amount of catcoins
-    cc_el.innerHTML = "<img src='https://catminer-reltest.vercel.app/game/assets/catcoin1.png' height='30px' style='vertical-align:middle'>" + numeral(catcoins).format('0.0a');
+    cc_el.innerHTML = "<img src='./assets/catcoin1.png' height='30px' style='vertical-align:middle'>" + numeral(catcoins).format('0.0a');
 },100)
 let helperCatMoneyInt = setInterval(() =>{
   if(numOfHelperCats > 0){
@@ -429,7 +429,7 @@ let helperCatInterval = setInterval(() =>{
     tinycat.style.position = "absolute";
     tinycat.style.left = randomCatPositions[numOfHelperCats][0];
     tinycat.style.top = randomCatPositions[numOfHelperCats][1];
-    tinycat.src = "https://catminer-reltest.vercel.app/game/assets/cm.gif";
+    tinycat.src = "./assets/cm.gif";
     tinycat.id="helpercat";
     tinycat.height=50;
     tinycat.style.zIndex = "-1";
@@ -465,7 +465,7 @@ for(var h = 0; h < numOfHelperCats;h++){
     tinycat.style.position = "absolute";
     tinycat.style.left = randomCatPositions[h][0];
     tinycat.style.top = randomCatPositions[h][1];
-    tinycat.src = "https://catminer-reltest.vercel.app/game/assets/cm.gif";
+    tinycat.src = "./assets/cm.gif";
     tinycat.id="helpercat";
     tinycat.height=50;
     ore_ctr.appendChild(tinycat);
@@ -488,9 +488,9 @@ if(activePick==="accordion"){
         accordion.currentTime=0;
         accordion.play();
         try {
-        pick_el.addEventListener("animationstart",()=>{pick_el.src="https://catminer-reltest.vercel.app/game/assets/accordion_pick1.png"});
+        pick_el.addEventListener("animationstart",()=>{pick_el.src="./assets/accordion_pick1.png"});
         pick_el.addEventListener("animationend",()=>{
-            pick_el.src="https://catminer-reltest.vercel.app/game/assets/accordion_pick.png";
+            pick_el.src="./assets/accordion_pick.png";
         })
         } catch(e){
             accordion.addEventListener("audio")
@@ -515,7 +515,7 @@ Mousetrap.bind('space',(e) =>{
     }
     //larry
 if(activePick === "snail"){
-    pick_el.src="https://catminer-reltest.vercel.app/game/assets/snail_pick1.png";
+    pick_el.src="./assets/snail_pick1.png";
     pick_el.onanimationend=()=>{
         pick_el.src=pick_src["snail"];
     }
@@ -651,7 +651,7 @@ try {
         console.log("pickaxe is not larry")
     }
     if(activePick==="eiffel Tower" && activePlace === "paris"){
-        document.body.style.backgroundImage = "url(https://catminer-reltest.vercel.app/game/assets/parisbg_hm.png)";
+        document.body.style.backgroundImage = "url(./assets/parisbg_hm.png)";
     } else {
         document.body.style.backgroundImage = "url("+place_img[activePlace]+")";
     }
@@ -679,7 +679,7 @@ function viewPick(e){
         if(boughtpicks.includes(pickaxes[e])){
             //you have already bought this pick
         dg_action.innerText = "▶";
-        dg_action.onclick = () => {dg_options.style.display="block";o1.onclick=()=>{activePick=pickaxes[e];dialog_el.innerText=dialog_lines["Mr. Loaf"][8];hide('options');pick_el.src=pick_src[pickaxes[e]];if(pick==="snail" && !(boughtpicks.includes(pick))){ alert("NOTICE:\nthe snail(larry) agreed to be a pickaxe. \nNo snails are to be harmed in the mining of this ore.") } else { console.log("pickaxe is not larry") } if(activePick==="eiffel Tower" && !(boughtpicks.includes(pick)) && activePlace === "paris"){ document.body.style.backgroundImage = "url(https://catminer-reltest.vercel.app/game/assets/parisbg_hm.png)"; special_func=()=>{pick_el.onanimationstart=()=>{};pick_el.onanimationend=()=>{}} } else { document.body.style.backgroundImage = "url("+place_img[activePlace]+")"; } if(activePick==="accordion"){ accordion.play() }};o2.onclick=()=>{}}
+        dg_action.onclick = () => {dg_options.style.display="block";o1.onclick=()=>{activePick=pickaxes[e];dialog_el.innerText=dialog_lines["Mr. Loaf"][8];hide('options');pick_el.src=pick_src[pickaxes[e]];if(pick==="snail" && !(boughtpicks.includes(pick))){ alert("NOTICE:\nthe snail(larry) agreed to be a pickaxe. \nNo snails are to be harmed in the mining of this ore.") } else { console.log("pickaxe is not larry") } if(activePick==="eiffel Tower" && !(boughtpicks.includes(pick)) && activePlace === "paris"){ document.body.style.backgroundImage = "url(./assets/parisbg_hm.png)"; special_func=()=>{pick_el.onanimationstart=()=>{};pick_el.onanimationend=()=>{}} } else { document.body.style.backgroundImage = "url("+place_img[activePlace]+")"; } if(activePick==="accordion"){ accordion.play() }};o2.onclick=()=>{}}
         hide('options');
         dialog_el.innerText = dialog_lines["Mr. Loaf"][5];
         
@@ -907,7 +907,7 @@ trvl_visit.addEventListener("click",()=>{
     airport.hidden=false;
     hide('options');
     //ding sound that is in every airport announcement in the US
-    setTimeout(() => {var dng = new Audio("https://catminer-reltest.vercel.app/game/assets/ding.mp3");dng.volume=0.25;dng.play();
+    setTimeout(() => {var dng = new Audio("./assets/ding.mp3");dng.volume=0.25;dng.play();
     //load dialog
     dg_person.innerText="Pilot Bob";
     dialog.style.display="flex";
