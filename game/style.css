@@ -6,36 +6,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
-body {
-    background-size:cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+  background-size: cover;
+  background-repeat: none;
+}
+
+
 #logo {
     height:60px;
     margin:15px;
 }
 #cat {
-    position:absolute;
+    
     height:350px;
-    top:30%;
     transform:scaleX(-1);
     z-index:0;
+    filter:drop-shadow(10px 10px 10px black);
 }
 #pick {
     position:absolute;
-    top:24%;
     left:220px;
+    z-index: 1;
     animation: swing 1s;
     transform-origin: 0 0;
     height:128px;
+    transform: translateY(-150px) translateX(-10px);
     transform-origin: bottom left;
+        filter:drop-shadow(2px 10px 10px black)
     
 }
+#mine-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;
+
+}
 #ore-src {
-    position:absolute;
-    height:25vh;
-    left:18vw;
-    top:41vh;
+    height:250px;
+
+
     z-index:-1;
+    filter:drop-shadow(2px 10px 10px black);
 }
 #ore-src:active {
     scale:0.9;
@@ -69,11 +90,12 @@ body {
 }
 @keyframes swing {
     0% {
-      transform: rotate(70deg);
-      top:22%;
+        transform: translateY(-150px) rotate(70deg) translateX(-10px);;
+
     }
     100% {
-      transform: rotate(0deg);
+        transform: translateY(-150px) rotate(0deg) translateX(-10px);;
+
     }
   }
 #shop {
@@ -92,6 +114,7 @@ body {
     width:100px;
     height:50px;
     z-index:10;
+
 
 }
 #event {
@@ -159,6 +182,7 @@ body {
     right:0; 
     margin-top:15vh;
     animation: mrloaf_idle 2.5s linear infinite;
+    filter: drop-shadow(5px 10px 10px black);
 }
 
 #shopsign {
@@ -175,6 +199,7 @@ body {
     height:150px;
     animation: spin 3s linear infinite;
     display: none;
+    filter: drop-shadow(2px 10px 10px black);
 }
 #buy {
     margin: 0 auto;
@@ -231,6 +256,7 @@ body {
     align-items: center;
     justify-content: center;
     animation:fade 2s;
+    animation-play-state: paused;
 }
 
 #spin{ 
@@ -278,7 +304,7 @@ animation: spin2 2s;
     align-items: center;
     color:white;
     font-family: Archivo;
-    font-size:x-large;
+    font-size:1.5vw;
     border-radius: 25px;
     
 }
@@ -385,9 +411,7 @@ noscript {
     
 }
 #place-img {
-    height:50vh;
-    width:100vw;
-    background-repeat: round;
+    height:45%;
     background-size:auto;
 }
 #exit {
@@ -404,6 +428,7 @@ noscript {
     cursor:pointer;
 }
 #airport {
+    
     top:0;
     left:0;
     position: absolute;
@@ -416,9 +441,11 @@ noscript {
   display:none;
   position:absolute;
   z-index:17;
-  left:52vw;
-  top:25%;
+  left:54%;
+  top:22%;
   font-family:Archivo;
+  font-size:1.5vw;
+  font-variant: small-caps;
   
 }
 #close:hover {
@@ -524,10 +551,9 @@ noscript {
     }
     50% {
         transform: rotate(360deg);
-
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(720deg);
 
     }
 }
@@ -570,7 +596,7 @@ display: none;
 #cat-cosmetics {
     position:absolute;
     /* this really sucks but for a lazy christmas update its good ig*/
-    margin: 3.25%  4% 0% 0%;
+    margin: 5vw 2vh 5vw;
     height:15vh;
     z-index:3;
     transform:scaleX(-1);
