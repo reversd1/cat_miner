@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+#money {
+  position: relative;
+  background:URL(./moneytexture.png); 
+  width:fit-content;
+  text-align:center;
+  overflow: hidden;
+  color:white;
+  text-overflow:ellipsis;
+  font-weight:bold;
+  font-family: Poppins; 
+  left:700px;
+
+ }
+ 
+ #cat {
+   position:relative;
+   top:100px;
+   left: 500px;
+   font-size:100px;
+ }
+ #pickaxe2 {
+   position:relative;
+   right:30px;
+   width:50px;
+   height:50px;
+   animation-name: swing;
+   animation-duration: 1s;
+   animation-iteration-count:infinite;
+ }
+ @keyframes swing {
+   25% {
+     transform:rotate(0deg);
+   }
+   50% {
+     transform:rotate(90deg);
+   }
+   90% {
+     transform:rotate(0deg);
+   }
+ }
+ h1 {
+   text-align: center;
+   font-family: Inter;
+ }
+
+ #coal {
+   position: relative;
+   right:60px;
+ }
+ #plusamt {
+   text-align: center;
+   font-family: poppins;
+ }
+.rainbow {
+
+
+   background: linear-gradient( 92deg, #95d7e3, #eb76ff );
+  background: -webkit-linear-gradient( 92deg, #95d7e3, #eb76ff );
+  background-size:600vw 600vw;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textAnimate 5s linear infinite alternate;
+}
+
+@keyframes textAnimate {
+  from {
+    filter: hue-rotate(0deg);
+    background-position-x: 0%;
+    
+  }
+  to {
+    filter: hue-rotate(360deg);
+    background-position-x: 600vw;
+    
+  }
+}
