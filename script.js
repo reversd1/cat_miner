@@ -7,6 +7,9 @@ window.onload = () => {
     loader.style.display='none';
     },1500)
 }
+  window.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+  });
 //audio stuff
 const accordion = new Audio("./assets/accord1.wav")
 const pickaxes = ["rusty","iron","gold","pickaxe","steel","baguette","accordion","snail","eiffel Tower","lasagna","christmas Tree","glitchy",];
@@ -408,7 +411,7 @@ let saveInterval = setInterval(() => {
       //undefined boost
     } else if(activeBoost !== undefined | null | 'undefined') {
       //e
-    }
+    } 
 
   
 
@@ -432,7 +435,7 @@ let helperCatInterval = setInterval(() =>{
     tinycat.src = "./assets/cm.gif";
     tinycat.id="helpercat";
     tinycat.height=50;
-    tinycat.style.zIndex = "-1";
+    tinycat.style.zIndex = "1";
     numOfHelperCats++;
     ore_ctr.appendChild(tinycat)
   } else {

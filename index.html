@@ -1,40 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versions</title>
+    <link rel="stylesheet" href="./home.css">
+    <title>Cat Miner</title>
 </head>
 <body>
-    <a href="../" style="position: absolute;top:0;right:0;">Home</a>
-    <div id="buttons">
-    <a href="./v01/">Version 0.1</a>
 
-    <a href="./v015/">Version 0.1.5</a>
-   
-    <a href="./v02/">Version 0.2</a>
-   
-    <a href="./v021/">Version 0.2.1</a>
-   
-    <a href="./v022/">Version 0.2.2</a>
-   
-    <a href="./v025/">Version 0.2.5</a>
-   
-    <a href="./v027/">Version 0.2.7</a>
-   
-    <a href="./v03/">Version 0.3</a>
-   
-    <a href="./v035/">Version 0.3.5</a>
-   
-    <a href="./v039/">Version 0.3.9</a>
-       
-    <a href="./v042/game/">Version 0.4.6</a>
+    <img src="./assets/cmlogo.png" id="logo" height="100px">
+    <div id="news">
+        <h1>0.4.6 beta is out!</h1>
+        - Bug fixes and general game improvements
+        <br><br>- Music will be added soon, and backgrounds finalized    
+    <br><br>- This list will be updated with future improvements
+    <br><br>- Helper cats
+    <br><br>- Boosts will be fixed soon (with an active boost menu)
+    <br><br> Thanks for playing! -Kyle
+</div>
+    <div id="buttons">
+        <button id="play" onclick="location.href='./game.html';">Play</button>
+        <br>
+        <button id="options" onclick=" localStorage.clear(); alert('save reset!');window.location.reload();" style="font-size:x-large">Reset Save</button>
+        <br>
+        <button id="versions" onclick="location.href='./versions/'">Versions</button>
     </div>
-    <script>
-  window.addEventListener('dragstart', function(e) {
-    e.preventDefault();
-  });
-</script>
 </body>
 </html>
