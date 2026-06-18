@@ -1,0 +1,374 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+
+h1 {
+  font-family: Ubuntu;
+}
+body {
+  font-family:ubuntu;
+}
+.upg {
+  font-family: "Poppins";
+  font-weight: bolder;
+  border: none;
+  background: #0000d6;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#cash {
+  position: fixed;
+  width: fit-content;
+  background-repeat:no-repeat;
+  text-align: center;
+  overflow: hidden;
+  color: black ;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  font-family: Archivo;
+  left: 10px;
+  top: 90px;
+}
+
+#pickaxe {
+  position: fixed;
+  top:150px;
+  left:13%;
+  height:120px;
+  transform:rotate(0deg);
+
+}
+@keyframes swing {
+  0% {
+    transform: rotate(70deg);
+    left:15%;
+    top:220px;
+  }
+  100% {
+    transform: rotate(0deg);
+    top:150px;
+    left:13%;
+    
+  }
+}
+#ore {
+  position: absolute;
+  left:260px;
+  top:200px;
+}
+
+
+.running {
+  animation-name:swing;
+  animation-duration:0.9s;
+  transform:rotate(70deg);
+  animation-play-state:paused;
+}
+.not-running {
+  animation-name: none;
+}
+@keyframes none {
+  0% {
+
+  }
+  100% {
+
+  }
+}
+#ugp1-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: .50;
+  -webkit-opacity: .5;
+  -moz-opacity: .5;
+  filter: alpha(opacity=50);
+  z-index: 1000;
+}
+
+#ugp1-content {
+  font-family:"Roboto Flex";
+  background-color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 0 0 20px 0 #222;
+  -webkit-box-shadow: 0 0 20px 0 #222;
+  -moz-box-shadow: 0 0 20px 0 #222;
+  display: none;
+  height: 500px;
+  left: 50%;
+  margin: -120px 0 0 -160px;
+  padding: 10px;
+  position: fixed;
+  top: 30%;
+  width: 800px;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+  -webkit-animation-name: animate__lightSpeedInRight;
+  -webkit-animation-duration: 0.4s;
+  animation-name: lightSpeedInRight;
+  animation-duration: 0.4s
+}
+
+#ugp1-background.active, #ugp1-content.active {
+  display: block;
+}
+#up1-background.active, #up1-content.active {
+  display: block;
+
+}
+#ugp1-close {
+  right:20px;
+}
+#settingsbtn {
+  border:none;
+  background:none;
+  position: absolute;
+  right:0;
+  bottom:0;
+}
+#ap #irp #gp #bgp {
+  display:inline;
+}
+#up1-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: .50;
+  -webkit-opacity: .5;
+  -moz-opacity: .5;
+  filter: alpha(opacity=50);
+  z-index: 1000;
+}
+
+#up1-content {
+  font-family:"Roboto Flex";
+  background-color: rgb(163, 176, 219);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 0 0 20px 0 #222;
+  -webkit-box-shadow: 0 0 20px 0 #222;
+  -moz-box-shadow: 0 0 20px 0 #222;
+  display: none;
+  height: 500px;
+  left: 50%;
+  margin: -120px 0 0 -160px;
+  padding: 10px;
+  position: fixed;
+  top: 30%;
+  width: 800px;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+  -webkit-animation-name: zoomIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: zoomIn;
+  animation-duration: 0.4s
+}
+
+.active {
+  display: block;
+}
+#up1-close {
+  right:20px;
+}
+#plusamt {
+  top:250px;
+  position: absolute;
+  left:34%;
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+
+.cave {
+  background-image: url(./assets/cavebg.png);
+  background-size: 1000px;
+}
+.paris {
+  color:black;
+  background-image:url(./assets/betabg.jpg);
+  background-size:1100px;
+  background-repeat:no-repeat;
+}
+#update {
+  color:white;
+    font-family:Archivo;
+}
+#glasses {
+  position: absolute;
+  top:230px;
+  left:5%;
+  transform: rotate(-15deg);
+  animation-name:bounceInDown;
+  animation-duration:0.8s;
+}
+
+#cutscene {
+  font-family:"Roboto Flex";
+  background-color: white;
+  display: none;
+  height: 100%;
+  left: 50%;
+  margin: -120px 0 0 -160px;
+  padding: 10px;
+  position: fixed;
+  top: 30%;
+  width: 100%;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+}
+
+#cutscene-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: .50;
+  -webkit-opacity: .5;
+  -moz-opacity: .5;
+  filter: alpha(opacity=50);
+  z-index: 1000;
+}
+.buy {
+  border:1px black;
+  border-radius:5px;
+  color:white;
+
+}
+#title {
+  top:1px;
+  position: absolute;
+}
+#cat {
+  position: absolute;
+  top:180px;
+}
+#travelticket {
+ animation:zoomIn 1s;
+}
+@keyframes GoUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+#welcome-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: .50;
+  -webkit-opacity: .5;
+  -moz-opacity: .5;
+  filter: alpha(opacity=50);
+  z-index: 1000;
+}
+
+#welcome-content {
+  color:rgb(29, 29, 29);
+  font-family:"Roboto Flex";
+  background-color: grey;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 0 0 20px 0 #222;
+  -webkit-box-shadow: 0 0 20px 0 #222;
+  -moz-box-shadow: 0 0 20px 0 #222;
+  display: none;
+  height: 93%;
+  left:12%;
+  margin: -120px 0 0 -160px;
+  padding: 10px;
+  position: fixed;
+  top: 18%;
+  width: 90%;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+  -webkit-animation-name: animate__lightSpeedInRight;
+  -webkit-animation-duration: 0.4s;
+  animation-name: lightSpeedInRight;
+  animation-duration: 0.4s
+}
+
+#welcome-background.active, #welcome-content.active {
+  display: block;
+}
+#welcome-background.active, #welcome-content.active {
+  display: block;
+
+}
+@keyframes marquee {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: -1190px;
+  }
+}
+#welcomeh1 {
+  animation:slideInLeft 2s;
+}
+#cm {
+  animation:fadeIn 3s;
+}
+.welcome-btn {
+  background:none;
+  border:2px solid rgb(37, 111, 124);
+  border-radius:25%;
+  font-family:Nunito;
+  font-size:20px;
+}
+.buy {
+  background:#03dac6;
+  color:black;
+  font-family:Archivo;
+}
+.title {
+  position: fixed;
+  right:2%;
+  height:7%;
+  background:none;
+  color:white;
+  border: none;
+}
