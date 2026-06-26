@@ -20,7 +20,7 @@
   flex-direction: row;
   gap:2.5vw;
 }
-button   {
+a   {
   font-family:"Golos Text";
   font-size:35px;
   border:none;
@@ -61,7 +61,7 @@ body {
   #logo {
     height: 50px;
   }
-  button {
+  a {
     height:min-content;
     width:min-content;
   }
