@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://catminer.net/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://catminer.net/game.html</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v01/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v015/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v02/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v021/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v022/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v025/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v027/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v03/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v035/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://catminer.net/versions/v039/</loc>
+  <lastmod>2026-06-26T20:01:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+</urlset>
